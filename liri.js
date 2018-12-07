@@ -1,9 +1,11 @@
+
+
 require("dotenv").config();
+var axios = require("axios")
 var fs = require("fs");
+var keys = require("./keys.js");
+// "var Spotify" is reading keys.js //
 var Spotify = require("node-spotify-api");
-fs.readFile("./keys.js", "utf8", function(error, data) {
-    if (error) {
-      return console.log(error);
-    }
-})
+// "var inquire" is initializing the pkg needed to grab user input //
+var inquirer = require("inquirer");
 var spotify = new Spotify(keys.spotify);
